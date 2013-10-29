@@ -4,6 +4,20 @@ require 'haml'
  
 module RockPaperScissors
   class App
+    def set_env(env)
+      @env = env
+      @session = env['rack.session']
+    end
+
+    def some_key 
+      return @session['some_key'].to_i if @session['some_key']
+      @session['some_key'] = 0
+    end
+
+    def some_key=(value)
+      @session['some_key'] = value
+    end
+
     def initialize(app = nil)
       @app = app
       @content_type = :html
@@ -13,8 +27,9 @@ module RockPaperScissors
     end
 
     def call(env)
-      req = Rack::Request.new(env) 
-      # req.env.keys.sort.each { |x| puts "#{x} => #{req.env[x]}" }
+      set_env(env)
+      req = Rack::Request.new(env)
+      req.env.keys.sort.each { |x| puts "#{x} => #{req.env[x]}" }
       computer_throw = @throws.sample
       player_throw = req.GET["choice"]
       answer = if !@throws.include?(player_throw)
@@ -31,9 +46,7 @@ module RockPaperScissors
         end
       engine = Haml::Engine.new File.open("views/index.haml").read
       res = Rack::Response.new
-      res.set_cookie("tiradas-Victorias", {:value => @tiradas['Victorias'], :path => "/", :domain => "", :expires => Time.now+24*60*60})
-      res.set_cookie("tiradas-Empates", {:value => @tiradas['Empates'], :path => "/", :domain => "", :expires => Time.now+24*60*60})
-      res.set_cookie("tiradas-Derrotas", {:value => @tiradas['Derrotas'], :path => "/", :domain => "", :expires => Time.now+24*60*60})
+      self.some_key = self.some_key + 1 if req.path == '/'
       res.write engine.render(
         {},
         :tiradas => @tiradas,
