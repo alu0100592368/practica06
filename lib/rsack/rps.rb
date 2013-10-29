@@ -4,6 +4,14 @@ require 'haml'
  
 module RockPaperScissors
   class App
+    def initialize(app = nil)
+      @app = app
+      @content_type = :html
+      @defeat = {'Piedra' => 'Tijera', 'Papel' => 'Piedra', 'Tijera' => 'Papel'}
+      @throws = @defeat.keys
+      @tiradas = {'Empates' => 0, 'Derrotas' => 0, 'Victorias' => 0}
+    end
+
     def set_env(env)
       @env = env
       @session = env['rack.session']
@@ -18,18 +26,10 @@ module RockPaperScissors
       @session['some_key'] = value
     end
 
-    def initialize(app = nil)
-      @app = app
-      @content_type = :html
-      @defeat = {'Piedra' => 'Tijera', 'Papel' => 'Piedra', 'Tijera' => 'Papel'}
-      @throws = @defeat.keys
-      @tiradas = {'Empates' => 0, 'Derrotas' => 0, 'Victorias' => 0}
-    end
-
     def call(env)
       set_env(env)
       req = Rack::Request.new(env)
-      req.env.keys.sort.each { |x| puts "#{x} => #{req.env[x]}" }
+      # req.env.keys.sort.each { |x| puts "#{x} => #{req.env[x]}" }
       computer_throw = @throws.sample
       player_throw = req.GET["choice"]
       answer = if !@throws.include?(player_throw)
