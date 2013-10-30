@@ -12,7 +12,7 @@ Esta práctica sigue como continuación de la práctica "[Añadir Pruebas a Rock
 
 Enlace aplicación en Heroku
 ---------------------------
-[piedrapapelotijera.herokuapp.com](piedrapapelotijera.herokuapp.com)
+[piedrapapelotijera.herokuapp.com](http://piedrapapelotijera.herokuapp.com/)
 
 Instrucciones
 -------------
