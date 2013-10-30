@@ -23,7 +23,12 @@ task :test do
   sh "ruby -Ilib -Itest test/tc_rps.rb"
 end
 
-desc "Ejecutar tests rspec"
+desc "Ejecutar tests rspec con documentación --format"
 task :spec do
-  sh "rspec -Ilib -Ispec spec/rsack/server_spec.rb"
+  sh "rspec -Ilib spec/rsack/server_spec.rb --format documentation"
+end
+
+desc "Ejecutar test rspec con formato: html"
+task :thtml do
+  sh "rspec -Ilib spec/rsack/server_spec.rb --format html > index.html"
 end
