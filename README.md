@@ -35,9 +35,10 @@ Instrucciones
 7. Para realizar los test con Rspec con salida formato html ejecutar mediante el archivo rake proporcionado:
 
         $ rake thtml
+
 Notas
 -----
-Se ha arreglado la gestión de sesiones con respecto a la práctica 5 con la correspondiente modificación en los determinados ficheros para que funciones las pruebas unitarias y las pruebas con rspec. 
+Se ha arreglado la gestión de sesiones con respecto a la práctica 5 con la correspondiente modificación en los ficheros requeridos para que funcionen las pruebas unitarias y las pruebas con rspec. 
 
 ---
 
