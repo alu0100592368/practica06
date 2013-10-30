@@ -8,7 +8,7 @@ Autor: Diego Williams Aguilar Montaño
 
 Descripción de la práctica
 --------------------------
-Esta práctica sigue como continuación de la práctica "[Añadir Pruebas a Rock, Paper, Scissors](https://dl.dropboxusercontent.com/u/14539152/LPP/LPPbook/node379.html)" donde se realiza el despliegue en Heroku, para ello se ha creado una cuenta en Heroku y a continuación se ha instalado el Heroku Toolbelt. Una vez se han introducido las Heroku credenciales se ha creado el fichero Procfile para declarar explícitamente qué comando se debe ejecutar para iniciar una web dinámica, por último se ha creado la aplicación en Heroku con `heroku create` y desplegado a Heroku con `git push heroku master.
+Esta práctica sigue como continuación de la práctica "[Añadir Pruebas a Rock, Paper, Scissors](https://dl.dropboxusercontent.com/u/14539152/LPP/LPPbook/node379.html)" donde se realiza el despliegue en Heroku, para ello se ha creado una cuenta en Heroku y a continuación se ha instalado el Heroku Toolbelt. Una vez se han introducido las Heroku credenciales se ha creado el fichero Procfile para declarar explícitamente qué comando se debe ejecutar para iniciar una web dinámica, por último se ha creado la aplicación en Heroku con `heroku create` y desplegado a Heroku con `git push heroku master`.
 
 Enlace aplicación en Heroku
 ---------------------------
