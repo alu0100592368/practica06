@@ -8,7 +8,7 @@ Autor: Diego Williams Aguilar Montaño
 
 Descripción de la práctica
 --------------------------
-Esta práctica sigue como continuación de la práctica "[Añadir Pruebas a Rock, Paper, Scissors](https://dl.dropboxusercontent.com/u/14539152/LPP/LPPbook/node379.html)" donde se realiza el despliegue en Heroku, para ello se ha creado una cuenta en Heroku y a continuación se ha instalado el Heroku Toolbelt. Una vez se han introducido las Heroku credenciales se ha creado el fichero Procfile para declarar explícitamente qué comando se debe ejecutar para iniciar una web dinámica, por último se ha creado la aplicación en Heroku con `heroku create` y desplegado a Heroku con `git push heroku master`.
+Esta práctica sigue como continuación de la práctica "[Añadir Pruebas a Rock, Paper, Scissors](https://dl.dropboxusercontent.com/u/14539152/LPP/LPPbook/node379.html)" donde se realiza el despliegue en Heroku, para ello se ha creado una cuenta en Heroku y a continuación se ha instalado el Heroku Toolbelt. Una vez se han introducido las Heroku credenciales se ha creado el fichero Procfile para declarar explícitamente qué comando se debe ejecutar para iniciar una web dinámica, por último se ha creado la aplicación en Heroku con `heroku create` y desplegado a Heroku con `git push heroku master.
 
 Enlace aplicación en Heroku
 ---------------------------
@@ -32,10 +32,13 @@ Instrucciones
 6. Para realizar los test con Rspec ejecutar mediante el archivo rake proporcionado:
 
         $ rake spec
+7. Para realizar los test con Rspec con salida formato html ejecutar mediante el archivo rake proporcionado:
 
+        $ rake thtml
 Notas
 -----
-Se ha arreglado la gestión de sesiones con respecto a la práctica 5 con la correspondiente modificación en los determinados ficheros para que funciones las pruebas unitarias y las pruebas con rspec.  
+Se ha arreglado la gestión de sesiones con respecto a la práctica 5 con la correspondiente modificación en los determinados ficheros para que funciones las pruebas unitarias y las pruebas con rspec. 
+
 ---
 
 Universidad de La Laguna  
