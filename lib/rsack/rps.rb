@@ -53,7 +53,8 @@ module RockPaperScissors
         :answer => answer,
         :throws => @throws,
         :computer_throw => computer_throw,
-        :player_throw => player_throw)
+        :player_throw => player_throw,
+        :some_key => some_key)
       res.finish
     end # call
   end   # App
